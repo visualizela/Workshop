@@ -16,8 +16,323 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section> 
+					<p style="font-size:80px;">Introduction to QGIS</p>
+					<p style="font-size:20px;"> By Jack Tieszen </p>
+				</section>
+				<section>
+					<p style="font-size:80px;">Contents</p>
+					<li>What/Who this program is for?</li>
+					<li>What is GIS?</li>
+					<li>The Workshop</li>
+					<li>Georeferencing</li>
+					<li>Geomerging</li>
+					<li>GitHub</li>
+					<li>Mapbox</li>
+					<li>Flaneur Publishing</li>
+				</section>
+				<section>
+					<p>Who/What is this program for?</p>
+					<img src="img/Qgis.png" alt="" class="center" width="600px" height="400"/>
+					<p style="font-size:20px;">This workshop is an introduction to QGIS for those who aren't within the geography department.</p>
+					<p style="font-size:20px;">We will cover: QGIS, georeferencing, geomerging, Mapbox, and Github publishing. </p>
+				</section>
+				<section>
+					<p>Goals of this workshop</p>
+					<p style="font-size:30px;">By the end of the program we will have something like this:</p>
+					<a href="url""font-size:30px;"> https://visualizela.github.io/flaneur/</a>
+					<img src="img/BoyleHeights.png" alt="" class="center" width="600px" height="400"/>
+				</section>									
+				<section>
+				<p>What is GIS</p>
+					<li style="font-size:20px;">GIS: Geographic Information System</li>
+					<li style="font-size:20px;">Designed to capture, store, manipulate, analyze, manage, and present spatial or geographic data.</li>
+					<li style="font-size:20px;">ArcGIS by Esri commonly used</li>
+					<li style="font-size:20px;">QGIS: Open source version</li>
+					<img src="img/GIS.jpg" alt="" class="center" width="600px" height="400"/>
+				</section>
+				<section>
+					<p>Goals for GIS</p>
+					<p style="font-size:20px;"> Making maps that are Accessible, Public, and Interactive through utilizing new or already existing data in order to represent information in new ways.</p>
+					<p style="font-size:20px;"> Maps are a very good resource for presenting things like historical trajectories, population information, city planning, law history, and many other areas in multiple disciplines. </p>
+					<p style="font-size:20px;"> Disciplines that can use GIS in their research: Law, History, Medicine, Sociology, Climatology, Political Science, Art, Anthropology, Geology, Linguistics, Economics, and many more.</p>
+				</section>
+				<section>
+					<p>The use of GIS for non-geography disciplines</p>
+					<li style="font-size:20px;"> Research, historical comparison, publishing</li>
+					<li style="font-size:20px;"> Ideally GIS enables humanities scholars to discover relationships of memory, artifact, and experience that exist in a particular place and across time. Although successfully used by other disciplines, efforts by humanists to apply GIS and the spatial analytic method in their studies have been limited and halting.</li>
+					<img src="img/Humanities.jpg" alt="" class="center" width="400px" height="800"/>
+				</section>
+				<section>
+					<p>Further links</p>
+					<a href="url""font-size:30px;"> https://www.blogs.hss.ed.ac.uk/tools-of-the-trade/use-gis-humanities-social-sciences/</a>
+					<br><a href="url""font-size:30px;"> https://libguides.wustl.edu/c.php?g=46935&p=4435069</a>
+					<br><a href="url""font-size:30px;"> https://gis.usc.edu/blog/the-application-of-geographic-and-information-science-gis-in-earth-sciences/</a>
+					<br><a href="url""font-size:30px;"> https://www.gisforscience.com/</a>
+				</section>
+				<section>
+					<p>Why QGIS</p>
+					<p style="font-size:20px;">Open source cross-platform desktop geographic information system.</p>
+					<p style="font-size:20px;">Works for Mac/PC/Linux.</p>
+					<p style="font-size:20px;">Unlicensed and developed by various programmers around the world.</p>
+					<img src="img/Qgislogo.png" alt="" class="center" width="600px" height="300"/>
+				</section>
+				<section>
+					<p>What we will be doing today</p>
+					<li style="font-size:20px;">Learning the basics of georeferencing.</li>
+					<li style="font-size:20px;">Publishing: From print to online.</li>
+					<li style="font-size:20px;">GitHub as a repository.</li>
+					<img src="img/Southla.png" alt="" class="center" width="400px" height="500"/>
+				</section>
+				<section>
+					<p>What you will need</p>
+					<p style="font-size:30px;">QGIS version 3.10 or 3.12 which can be downloaded at qgis.org</p>
+						<p style="font-size:20px;">3.10 is the most stable while 3.12 has more features, both work for this particular workshop.</p>
+					<p style="font-size:40px;">Folder:</p>
+						<p style="font-size:20px;">Features a file titled Map.tiff and Key.jpeg. These will be the materials that we will work with. They have been digitized at 600 dpi (dots per inch) at the VKC library.</p>
+				</section>
+				<section>
+					<p>Additional Plugins</p>
+					<p style="font-size:20px;">There are a few things that you are going to want to add to your QGIS.</p>
+					<p style="font-size:20px;">To find plugins go to the taskbar and click plugins – manage plugins, this will open a new window where you can search for the two plugins below:</p>
+						<li style="font-size:20px;">Quickmapservices: Used to input a base map which we will use for georeferencing.</li>
+						<li style="font-size:20px;">QGIStoWeb: Used for publishing via Github when you wish to go straight from the app to a finished product.</li>
+							<p style="font-size:15px;">QGIStoWeb isn’t necessary for this workshop, but it is useful if you are just publishing the map online.</p>
+				</section>
+				<section>
+					<p>Before using QGIS: Check your images</p>
+					<p style="font-size:20px;">
+					This is an additional step (given that the maps provided have been edited down, but once you have digitized your maps make sure that you crop/edit them to remove unnecessary whitespace unless you want that to show up in the finished map.
+					<br>
+					You can do this via photo editing software.
+					</p>
+					<img src="img/Map.png" alt="" class="center" width="400px" height="400"/>
+				</section>
+				<section>
+					<p>Before using QGIS: Make sure you have the right repository</p>
+					<p style="font-size:20px;">For this project we are only using two images which doesn’t require much, but if you wish to pursue this further and start digitizing other maps/metadata then before you georeference get in the habit of labeling your map pieces and your metadata and putting them in places that are easy to access/re-access.</p>
+					<p style="font-size:20px;">For the VKC government planning documents we used a google drive and input the names of each file into a large google sheet as a way to organize them.</p>
+				</section>
+				<section>
+					<p>Set up OSM Map</p>
+					<img src="img/OSM.png" alt="" class="center" width="500px" height="300"/>
+					<p style="font-size:30px;">Follow the image within QGIS: Web - QuickMapServices - OSM - OSM Standard</p>
+				</section>
+				<section>
+					<p>Georeferencing: What is it?</p>
+					<p style="font-size:30px;">Georeferencing is the process of assigning real-world coordinates to each pixel of the raster.</p>
+					<p style="font-size:30px;">Taking the map image that you have and attaching that to an open street map.</p>
+					<p style="font-size:30px;">Historical maps, planning maps, building plans, transportation plans, etc.</p>
+					<img src="img/GeoreferenceHistory.jpg" alt="" class="center" width="500px" height="300"/>
+				</section>
+				<section>
+					<section>
+						<p>Georeferencing</p>
+						<img src="img/Georeference.png" alt="" class="center" width="500px" height="300"/>
+						<p style="font-size:30px;">Once the background map is created go to: Raster - Georeferencer</p>
+					</section>
+					<section>
+						<p>Georeferencing</p>
+						<img src="img/Georeference2.png" alt="" class="center" width="500px" height="100"/>
+						<p style="font-size:30px;">A new window will pop up: <br>
+							Click on Open Raster and it will prompt you to open the .tiff files from your computer. <br>
+							Click on this to open up the image that you wish to georeferenced. </p>
+						<img src="img/Georeference3.png" alt="" class="center" width="200px" height="50"/>
+						<p style="font-size:30px;">This series of buttons are to add georeferencing points: Add, delete, move.</p>
+					</section>
+					<section>
+						<p>Georeferencing</p>
+						<p style="font-size:15px;"> When you click on the “Add points” button the cursor will change. <br>
+						Click on a point on the image and this pop-up window will show. <br>
+						Click on the “From Map Canvas” button both windows (this plus the georeferencer) will go away to expose the OSM map behind it.<br>
+						Simply click on the area that closely corresponds to the image area you clicked and that will connect the .tiff to the map.<br>
+						You must do this at least six times for the georeference to work, the more points you put in the more accurate the georeference.
+						</p>
+						<img src="img/Georeference4.png" alt="" class="center" width="550px" height="450"/>
+					</section>
+					<section>
+						<p>Georeferencing</p>
+						<p style="font-size:20px;">Set the transformation parameters: <br>
+						Note: You can do this immediately or you can wait until you’ve finished georeferencing which will cause this to pop up.<br>
+						Transformation type: Polynomial 2<br>
+						Resampling method: Nearest neighbor<br>
+						Target SRS: EPSG3B57 – WGS 84 / Pseudo-Mercator<br>
+						Compression: LZW <br> </p>
+						<img src="img/Georeference5.png" alt="" class="center" width="300px" height="300"/>
+					</section>
+				</section>
+				<section>
+					<p>Geomerging</p>
+					<img src="img/Merge1.png" alt="" class="center" width="400px" height="200"/>&nbsp;<img src="img/Merge2.png" alt="" class="center" width="400px" height="200"/>
+					<p style="font-size:15px;"> Geomerging is only needed if you have multiple maps that you are going to input on a website that has a layer limit (like Mapbox).<br>
+						If you followed the process by georeferencing individual files then this is what you should do. <br>
+						At the taskbar go to Raster - Miscellaneous - Merge.<br>
+						In the input layers section click the button with … on it and select all the layers you are trying to merge. <br>
+						In the merged area click the … button and save the file to the desktop as Geomerge.<br>
+						Then click the run button to merge the files.<br></p>
+	
+				</section>
+				<section>
+					<p>Geomerging Continued</p>
+					<p style="font-size:20px;">
+						Once this is concluded there will likely be a black border that obscures a significant amount of the map.<br>
+						Click on the information icon (the blue circle with an I in it) and click on the black border.<br>
+						Take the number from that and go to the raster file Geomerge, open it by double-clicking on the merged file.<br>
+						In the transparency page, you are going to put the number you found in the No Data Value - Additional no data value area, which will remove the black.<br>
+						It will also shift the colors of the map to be brighter to go to the symbology page and mess around with the color rendering. For this map, I changed the blending mode, brightness, and contrast. This might be very different depending on the maps that you have. There is also the option to convert the raster from PCT to RGB by going to Raster - Conversion - PCT to RGB… and inputting the correct layer.<br>
+					</p>
+				</section>
+				<section>
+					<p>GitHub</p>
+					<p style="font-size:30px;">
+						Online version control that uses Git.<br>
+						It allows you to host projects and uses Git to track the files.<br>
+					</p>
+					<img src="img/Github.png" alt="" class="center" width="400px" height="400"/>
+				</section>
+				<section>
+					<p>Make a GitHub repository</p>
+					<img src="img/Repo.jpg" alt="" class="center" width="550px" height="150"/>
+					<p style="font-size:45px;"> Open an account and click the plus symbol at the top right.</p>
+				</section>
+				<section>
+					<p>Make a GitHub repository continued</p>
+					<img src="img/Repo2.jpg" alt="" class="center" width="350px" height="350"/>
+					<p style="font-size:20px;"> Give it a name (make sure not to use spaces) and a description.<br>
+						Make it public or private. <br>
+						Initialize with README is only necessary if you are starting from scratch, since we are copying from another repository it isn’t necessary.<br>
+						Click the create repository button at the bottom.<br>
+					</p>
+
+				</section>
+				<section>
+					<p>QGIS to GitHub</p>
+					<p>You can follow the tutorial below if you wish to just upload the map to a GitHub website without any additional data.</p>
+					<br>
+					<a href="url"> https://maptimela.github.io/map-website/</a>
+				</section>
+				<section>
+					<p>Mapbox: What is it?</p>
+					<p> Mapbox is an open source mapping program.</p>
+					<p> Requires creating an account. </p>
+					<img src="img/mapbox.jpg" alt="" class="center" width="350px" height="350"/>
+					
+				</section>
+				<section>
+					<p>How to put layers into Mapbox</p>
+					<p style="font-size:20px;">In mapbox you are going to want to create an account and go to “studio,” which can be found by clicking on your own icon.
+					<br> Click on the “New Style” button and pick whichever style best suits your interest. For this we will choose the “basic” style template.
+Once this has been accomplished go to the area which we will be adding map information, in this case Los Angeles, from the standard area which is Paris, France.
+					<br> When you have found yourself in the area click on the layers tab (top left button near the components button) and then click on plus button (Add New Layer).</p>
+					<img src="img/Layers.png" alt="" class="center" width="200px" height="350"/>
+				</section>
+				<section>
+					<p>MapBox continued</p>
+					<p style="font-size:20px;">Now click the upload data button and put in your modified .tiff files that you georeferenced from QGIS. Keep in mind that these files need to be .tiffs and they also need to be small enough files (8 bits) or else you will get an error message.
+					<br>
+					Once you upload your tiles make sure that you click and drag the files into the layers zone in the Mapbox. Also keep in mind that for certain profiles (Free tier) you can only put in 15 layers within a given map.
+					<br>
+					Once this is complete click the blue “Publish” button on the top right.
+						<br></p>
+					<img src="img/Layers2.png" alt="" class="center" width="250px" height="350"/>
+				</section>
+				<section>
+					<section><p>Flaneur</p>
+					<img src="img/Flaneur.png" alt="" class="center" width="350px" height="100"/>
+					<p style="font-size:30px;"> Copy this repository into your own by clicking the clone or download button: <br>
+					<a href="url" "font-size: 30px;"> https://github.com/kirschbombe/flaneur</a>	
+					<br>
+					<p style="font-size:20px;">You can either import this repository or you can take the files and add them into the one that you created.
+					<br>
+						Go to settings and set the source as a master branch in order to see the link so that you are able to visualize the website.
+						</p>
+					</section>
+					<section><p>Flaneur continued</p>
+					<p style="font-size:20px;"> The first thing that you will do is eliminate/change things so that the website suits the information/maps that we will be putting into it.
+					<br>
+					The next few steps don’t need to be done in order but they should be accomplished before moving onto inputting the maps that we created through Mapbox into the github.
+					<br>
+					The first element that we will shift will be the home page. At its current state it is written exclusively about Flaneur which isn’t the information that we wish to provide.
+					<br>
+					On the page click on the home.md link then, one in, click the “edit this file” button on the top right of the screen, it will look like a pencil. Like so:</p>
+					<img src="img/Edit.png" alt="" class="center" width="200px" height="100"/>
+					</section>
+					<section><p>Flaneur continued</p>
+						<img src="img/Flaneurhome.png" alt="" class="center" width="250px" height="150"/>
+						<p style="font-size:20px;"> You are going to edit the page to reflect the new data.
+						<br><br>
+						Next, we are going to go to the _posts folder on the main page and delete 2018-02-24-boulevardier.md as it will be unnecessary for this map. You can also go to the images folder and delete the two boulevardier.jpg images.
+						<br><br>
+						Note: If you delete everything within a folder it deletes the folder with it. To remedy this or to create a new folder click the “create new file” button and in the name put the name of your new folder with a / after it so that it looks like flaneur/folder/ and then add a test document like test.txt. You will eventually remove this test document for other documents but keep it in until you do that lest you accidently delete the folder again.
+						</p>
+					</section>
+					<section><p>Flaneur continued</p>
+					<p style="font-size:30px;">
+						Go to the _configure.yml link and click on the edit button.
+						<br>
+						Below you will see the line called “Map Settings” here you will change two things.
+						<br>
+						The first is the link, which you can find the correct one by going to your mapbox studio, clicking on share at the top right, and copying one of the two links that are provided to you.
+						<br>
+						Paste that link into the GitHub line.
+						<br>
+						Next you are going to change the latitude and longitude in the set view as it is currently set on Paris, France. You can use whatever lat/long you would like.
+						</p>
+					</section>
+					<section><p>Flaneur continued</p>
+					<p style="font-size:30px;">
+						From here we will begin putting in our information/linking things to the map so that when we click on them they open up a window. We will first put our pictures within GitHub.
+						<br>
+						Go to the images folder and create a folder for the images that you wish to display within the website.
+						<br>
+						Note: These images must be in .jpg or .jpeg form or else they will not be displayed. .pdf files can be uploaded to the Github, but only if you wish to use them as downloads rather than as displayed images.
+						</p>
+					</section>
+					<section><p>Flaneur continued</p>
+					<p style="font-size:30px;">
+						From here we will begin to create our webpages for the individual maps.
+						<br>
+						In the _posts folder we will begin to create a new webpage.
+						<br>
+						Create a new file and title it by year-month-day-title.md for instance my South LA page was titled 2020-02-28-southla1991.md.
+						<br>
+						Go back to the initial _posts folder and go to the _ post_template.md page.
+						<br>
+						Within this click on the “Edit this file” button so that it shows you the base text format for the webpage. Copy this and paste it into your year-month-day-title.md text line.
+						<br>
+						Edit what is necessary, for the South LA webpage I ended up with this:
+						</p>
+						<img src="img/Syntax.png" alt="" class="center" width="350px" height="250"/>
+					</section>
+					<section><p>Flaneur continued</p>
+						<p style="font-size:30px;">
+							Below this you will put in the information that you wish to show on the webpage.
+					<br>
+							For the 1991 LA City Plans website we wanted to show the key to the map, the pages from the packet, and a link to download the full file.
+					<br>
+							The syntax can be found in the _post_template.md file but I will go over each line to showcase what does what. Below is the syntax for showing the Key and to download the full file.
+						</p>
+						<img src="img/Syntax2.png" alt="" class="center" width="350" height="150"/>
+					</section>
+					<section><p>Flaneur continued</p>
+						<p style="font-size:30px;"> For the rest of the images I used bare bones programming to showcase the pictures and a small caption only, it looks like this:</p>
+						<img src="img/Programming.png" alt="" class="center" width="200" height="350"/>
+						<p style="font-size:30px;">Make sure that the image names match the names in the image folder.</p>
+					</section>
+				</section>
+				<section><p>Additional</p>
+				<p style="font-size:30px;">
+					An addition thing that you can do if you wish is include a map as a reference point.
+					<br>
+					To do this you will create a new map within Mapbox which is just a plain file.
+					<br>
+					You will also create an .md file on the main page of the GitHub repository.
+					<br>
+					Within the text editor edit it so that when finished it looks like this:
+					</p>
+					<img src="img/Additional.png" alt="" class="center" width="450" height="250"/>
+				</section>
+				<section><p>Thank you</p></section>
 			</div>
 		</div>
 
